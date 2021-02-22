@@ -54,3 +54,6 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', LogoutController::class)
         ->name('logout');
 });
+
+// 学习Tailwid+Apline
+Route::view('/', 'ta/index')->name('index');   //测试页面,覆盖根路径

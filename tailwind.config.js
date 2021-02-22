@@ -6,11 +6,17 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
+            borderRadius: {
+              xl: '1rem',
+              '2xl': '2rem',
+              '3xl': '3rem'
+            },
         },
     },
     variants: {
         extend: {
             backgroundColor: ['active'],
+            margin: ['responsive', 'hover'],
         }
     },
     purge: {
