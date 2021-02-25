@@ -395,20 +395,31 @@ return [
     |
     */
     'extensions' => [
-        'tinymce' => [
-            // Set to false if you want to disable this extension
+        // 'tinymce' => [
+        //     // Set to false if you want to disable this extension
+        //     'enable' => true,
+        //     // Editor configuration
+        //     'config' => [
+        //         // 'relative_urls'=> false,      //不设置为相对路径
+        //         // 'remove_script_host'=> false,    //不移除主机域名
+        //         'images_upload_base_path'=>env('APP_URL'),
+        //         'resize'=> true,
+        //         'plugins'=> 'advlist autolink link image lists preview code help fullscreen table autoresize ',   // 插件
+        //         'toolbar'=> 'undo redo | styleselect | fontsizeselect bold italic | link image blockquote removeformat | indent outdent bullist numlist code',   // 配置工具栏
+        //         'images_upload_url'=> '/upload_image',  //图片上传接口  返回格式：{ location : "/demo/image/1.jpg" }
+        //     ]
+        // ]
+        'ueditor' => [
+
+            // 如果要关掉这个扩展，设置为false
             'enable' => true,
-            // Editor configuration
+
+            // 编辑器的前端配置 参考：http://fex.baidu.com/ueditor/#start-config
             'config' => [
-                // 'relative_urls'=> false,      //不设置为相对路径
-                // 'remove_script_host'=> false,    //不移除主机域名
-                'images_upload_base_path'=>env('APP_URL'),
-                'resize'=> true,
-                'plugins'=> 'advlist autolink link image lists preview code help fullscreen table autoresize ',   // 插件
-                'toolbar'=> 'undo redo | styleselect | fontsizeselect bold italic | link image blockquote removeformat | indent outdent bullist numlist code',   // 配置工具栏
-                'images_upload_url'=> '/upload_image',  //图片上传接口  返回格式：{ location : "/demo/image/1.jpg" }
-            ]
-        ]
+                'initialFrameHeight' => 400, // 例如初始化高度
+            ],
+            // 'field_type' => '自定义名字'
+        ],
 
     ],
 ];

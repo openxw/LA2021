@@ -93,8 +93,8 @@ class ActivityController extends AdminController
 
         $form->text('name', __('Name'));
         $form->image('image', __('Image'));
-        $form->tinymce('intro', __('Intro'));
-        $form->textarea('details', __('Details'));
+        $form->text('intro', __('Intro'));
+        $form->UEditor('details', __('Details'));
         $form->datetime('start_at', __('Start at'))->default(date('Y-m-d H:i:s'));
         $form->datetime('end_at', __('End at'))->default(date('Y-m-d H:i:s'));
         $form->text('location', __('Location'));
