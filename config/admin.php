@@ -395,6 +395,20 @@ return [
     |
     */
     'extensions' => [
+        'tinymce' => [
+            // Set to false if you want to disable this extension
+            'enable' => true,
+            // Editor configuration
+            'config' => [
+                // 'relative_urls'=> false,      //不设置为相对路径
+                // 'remove_script_host'=> false,    //不移除主机域名
+                'images_upload_base_path'=>env('APP_URL'),
+                'resize'=> true,
+                'plugins'=> 'advlist autolink link image lists preview code help fullscreen table autoresize ',   // 插件
+                'toolbar'=> 'undo redo | styleselect | fontsizeselect bold italic | link image blockquote removeformat | indent outdent bullist numlist code',   // 配置工具栏
+                'images_upload_url'=> '/upload_image',  //图片上传接口  返回格式：{ location : "/demo/image/1.jpg" }
+            ]
+        ]
 
     ],
 ];

@@ -15,7 +15,7 @@
         <i class="fas fa-bars fa-2x visible md:invisible mr-10 md:mr-0 text-blue-200 cursor-pointer" ></i>
       </div>
 
-      <ul class="hidden md:flex overflow-x-hidden mr-10 font-semibold"  >
+      <ul class="hidden md:flex overflow-x-hidden mr-10 font-semibold "  >
         <li class="mr-6 p-1 border-b-2 border-yellow-400">
           <a class="text-blue-200 cursor-default" href="#">主页</a>
         </li>

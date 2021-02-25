@@ -10,6 +10,9 @@ use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Auth\Verify;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UploadController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,5 +58,10 @@ Route::middleware('auth')->group(function () {
         ->name('logout');
 });
 
+//图片上传
+Route::post('upload_image', [UploadController::class,'upload_image'])
+        ->name('upload_image');
+
+
 // 学习Tailwid+Apline
-Route::view('/', 'ta/index')->name('index');   //测试页面,覆盖根路径
+Route::view('/test', 'ta/index')->name('index');   //测试页面,覆盖根路径
